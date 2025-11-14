@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  home-manager.user.${username} = import ./home-manager.nix;
+  home-manager.user.lingshin = import ./config.nix;
   users = {
     groups.lingshin = {};
     users.lingshin = {
