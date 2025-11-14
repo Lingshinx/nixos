@@ -1,6 +1,6 @@
-{utils, ...}: {
+{customUtils, ...}: {
   imports =
-    utils.listAllFiles ../../system
+    customUtils.listAllFiles ../../system
     ++ [
       ./hardware.nix
       ../../home/lingshin
