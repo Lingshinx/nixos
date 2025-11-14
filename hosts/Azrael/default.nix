@@ -1,10 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  utils,
-  ...
-}: {
+{utils, ...}: {
   imports =
     utils.listAllFiles ../../system
     ++ [
