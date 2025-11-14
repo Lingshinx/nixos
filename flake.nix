@@ -5,8 +5,10 @@
     home-manager,
     ...
   } @ inputs: let
+    inherit (builtins) baseNameOf;
     inherit (import ./utils.nix) listAllDirs listAllFiles listAddValue;
-    hosts = map basename (listAllDirs ./hosts);
+    utils = import ./utils.nix {inherit nixpkgs;};
+    hosts = map baseNameOf (listAllDirs ./hosts);
   in {
     nixosConfigurations =
       listAddValue
