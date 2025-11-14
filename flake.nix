@@ -6,15 +6,15 @@
     ...
   } @ inputs: let
     inherit (builtins) baseNameOf;
-    inherit (import ./utils.nix) listAllDirs listAllFiles listAddValue;
     utils = import ./utils.nix {inherit nixpkgs;};
+    inherit (utils) listAllDirs listAllFiles listAddValue;
     hosts = map baseNameOf (listAllDirs ./hosts);
   in {
     nixosConfigurations =
       listAddValue
       (host:
         nixpkgs.lib.nixosSystem {
-          specialArgs = {inherit inputs;};
+          specialArgs = {inherit inputs utils;};
           modules = [
             (import "${home-manager}/nixos")
             ./hosts/${host}
