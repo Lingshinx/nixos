@@ -6,7 +6,7 @@
   ...
 }: {
   imports =
-    listAllFiles ../../system
+    utils.listAllFiles ../../system
     ++ [
       ./hardware.nix
       ../../home/lingshin
