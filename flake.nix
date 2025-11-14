@@ -7,11 +7,13 @@
   } @ inputs: let
     inherit (builtins) baseNameOf;
     utils = import ./utils.nix {inherit nixpkgs;};
-    inherit (utils) listAllDirs listAllFiles listAddValue;
+    inherit (utils) listAllDirs listAllFiles;
+    inherit (nixpkgs.lib) genAttrs;
     hosts = map baseNameOf (listAllDirs ./hosts);
   in {
     nixosConfigurations =
-      listAddValue
+      genAttrs
+      hosts
       (host:
         nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs utils;};
@@ -19,8 +21,7 @@
             (import "${home-manager}/nixos")
             ./hosts/${host}
           ];
-        })
-      hosts;
+        });
   };
 
   inputs = {
