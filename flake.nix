@@ -8,7 +8,7 @@
     inherit (builtins) baseNameOf;
     utils = import ./utils.nix {inherit nixpkgs;};
     inherit (utils) listAllDirs listAllFiles;
-    inherit (nixpkgs.lib) genAttrs;
+    inherit (nixpkgs.lib.attrsets) genAttrs;
     hosts = map baseNameOf (listAllDirs ./hosts);
   in {
     nixosConfigurations =
