@@ -1,5 +1,5 @@
-{...}: let
-  inherit (imports ../utils.nix) listAll;
+{utils, ...}: let
+  inherit (utils) listAllFiles;
 in {
   imports = listAllFiles ./.;
 }
