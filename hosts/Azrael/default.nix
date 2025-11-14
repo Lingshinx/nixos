@@ -2,13 +2,15 @@
   config,
   lib,
   pkgs,
+  utils,
   ...
 }: {
-  imports = [
-    ../../system
-    ./hardware.nix
-    ../../home/lingshin
-  ];
+  imports =
+    listAllFiles ../../system
+    ++ [
+      ./hardware.nix
+      ../../home/lingshin
+    ];
 
   system.copySystemConfiguration = true;
   system.stateVersion = "25.11"; # Did you read the comment?
