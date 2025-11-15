@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+ln -sf ~/.config/anyrun/{style-dark.css,style.css}
