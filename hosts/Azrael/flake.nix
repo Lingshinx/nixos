@@ -16,7 +16,7 @@
     home-manager,
     ...
   } @ inputs:
-    with import ./utils.nix {inherit nixpkgs;};
+    with import ../../utils.nix {inherit nixpkgs;};
     with builtins;
       nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
