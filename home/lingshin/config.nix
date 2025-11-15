@@ -7,10 +7,11 @@
     source = "${dir}";
     recursive = true;
   };
+
+  sources = inputs.lingshin.inputs;
 in {
   home.username = "lingshin";
   home.homeDirectory = "/home/lingshin";
-
   imports = [./cli.nix ./gui.nix];
 
   home.file = {
@@ -18,8 +19,8 @@ in {
   };
 
   xdg.configFile = {
-    mpv = sourceDir inputs.lingshin.mpv-modernx;
-    nvim = sourceDir inputs.lingshin.nvim;
+    mpv = sourceDir sources.mpv-modernx;
+    nvim = sourceDir sources.nvim;
   };
 
   xdg.dataFile = {

@@ -22,14 +22,7 @@ in
         nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
       };
 
-    outputs = inputs:
-      listToAttrs (map (name: {
-        inherit name;
-        value = inputs."${name}";
-      }) (attrNames sources))
-      // {
-        modules = [
-          ./default.nix
-        ];
-      };
+    outputs = inputs: {
+      modules = [./group.nix];
+    };
   }
