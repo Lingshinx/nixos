@@ -24,7 +24,7 @@ in {
   };
 
   xdg.dataFile = {
-    "nvim/lazy/lazy-nvim" = sourceDir inputs.lingshin.lazy-nvim;
+    "nvim/lazy/lazy-nvim" = sourceDir sources.lazy-nvim;
   };
 
   programs = {
