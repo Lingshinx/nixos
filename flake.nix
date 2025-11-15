@@ -1,13 +1,23 @@
 {
   outputs = {
     self,
-    Azrael,
+    nixpkgs,
     ...
-  }: {
-    nixosConfigurations.Azrael = Azrael;
+  } @inputs : {
+    nixosConfigurations = nixpkgs.lib.genAttrs ["Azrael"] (
+      host: nixpkgs.lib.nixosSystem inputs."${host}"
+    );
   };
 
-  inputs = {
-    Azrael.url = "path:./hosts/Azrael";
-  };
+  inputs = builtins.deepSeq (with builtins;
+    listToAttrs (map (name: {
+      inherit name;
+      value = {
+        url = "path:./hosts/${name}";
+        inputs.nixpkgs.follows = "nixpkgs";
+      };
+    }) ["Azrael"])
+    // {
+      nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    });
 }
