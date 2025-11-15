@@ -2,7 +2,7 @@ with builtins; rec {
   intend = str: "  " + str;
 
   showBool = x:
-    if isBool x
+    if x
     then "true"
     else "false";
 
