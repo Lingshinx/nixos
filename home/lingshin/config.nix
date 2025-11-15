@@ -4,7 +4,7 @@
   ...
 }: let
   sourceDir = dir: {
-    source = dir;
+    source = "${dir}";
     recursive = true;
   };
 in {
@@ -15,11 +15,11 @@ in {
 
   home.file = {
     ".config" = sourceDir ../../dotfiles/config;
-    nvim = sourceDir inputs.lingshin.nvim;
   };
 
   xdg.configFile = {
     mpv = sourceDir inputs.lingshin.mpv-modernx;
+    nvim = sourceDir inputs.lingshin.nvim;
   };
 
   xdg.dataFile = {
