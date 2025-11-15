@@ -2,7 +2,6 @@
   "nodes": {
     "Azrael": {
       "inputs": {
-        "flakegen": "flakegen",
         "home-manager": "home-manager",
         "lingshin": "lingshin",
         "nixpkgs": [
@@ -18,42 +17,6 @@
         "type": "path"
       },
       "parent": []
-    },
-    "flakegen": {
-      "inputs": {
-        "systems": "systems"
-      },
-      "locked": {
-        "lastModified": 1707120544,
-        "narHash": "sha256-pXwH9NLXjhjnaz1n7w5m36gVUZ1GVkvtltsLnvVPFJY=",
-        "owner": "jorsn",
-        "repo": "flakegen",
-        "rev": "8b11749b0724700273462a674dd16e5549fe2790",
-        "type": "github"
-      },
-      "original": {
-        "owner": "jorsn",
-        "repo": "flakegen",
-        "type": "github"
-      }
-    },
-    "flakegen_2": {
-      "inputs": {
-        "systems": "systems_2"
-      },
-      "locked": {
-        "lastModified": 1707120544,
-        "narHash": "sha256-pXwH9NLXjhjnaz1n7w5m36gVUZ1GVkvtltsLnvVPFJY=",
-        "owner": "jorsn",
-        "repo": "flakegen",
-        "rev": "8b11749b0724700273462a674dd16e5549fe2790",
-        "type": "github"
-      },
-      "original": {
-        "owner": "jorsn",
-        "repo": "flakegen",
-        "type": "github"
-      }
     },
     "home-manager": {
       "inputs": {
@@ -96,7 +59,6 @@
     },
     "lingshin": {
       "inputs": {
-        "flakegen": "flakegen_2",
         "lazy-nvim": "lazy-nvim",
         "mpv-modernx": "mpv-modernx",
         "nixpkgs": [
@@ -175,36 +137,6 @@
       "inputs": {
         "Azrael": "Azrael",
         "nixpkgs": "nixpkgs"
-      }
-    },
-    "systems": {
-      "locked": {
-        "lastModified": 1681028828,
-        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
-        "owner": "nix-systems",
-        "repo": "default",
-        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-systems",
-        "repo": "default",
-        "type": "github"
-      }
-    },
-    "systems_2": {
-      "locked": {
-        "lastModified": 1681028828,
-        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
-        "owner": "nix-systems",
-        "repo": "default",
-        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-systems",
-        "repo": "default",
-        "type": "github"
       }
     }
   },
