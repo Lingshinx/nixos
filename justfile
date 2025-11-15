@@ -1,5 +1,5 @@
-check: prebuild
-  nix flake check
+check argu = "" : prebuild
+  nix flake check {{argu}}
 
 debug: prebuild
   nixos-rebuild switch --flake . --show-trace
