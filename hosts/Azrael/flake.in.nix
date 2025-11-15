@@ -19,17 +19,18 @@ in {
     home-manager,
     ...
   } @ inputs:
-    with import ../../utils.nix {inherit nixpkgs;};
-    with builtins; {
-      specialArgs = {inherit inputs;};
-      modules = concatLists [
-        (listAllFiles ../../system)
-        lingshin.modules
-        [
-          "${home-manager}/nixos"
-          ./hardware.nix
-          ({...}: {system.stateVersion = "25.11";})
-        ]
-      ];
-    };
+    with import ../../utils/listFs.nix {inherit nixpkgs;};
+    with builtins;
+      {
+        specialArgs = {inherit inputs;};
+        modules = concatLists [
+          (listAllFiles ../../system)
+          lingshin.modules
+          [
+            "${home-manager}/nixos"
+            ./hardware.nix
+            ({...}: {system.stateVersion = "25.11";})
+          ]
+        ];
+      };
 }

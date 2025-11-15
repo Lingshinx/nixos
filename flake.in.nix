@@ -1,11 +1,13 @@
-{
+let
+  hosts = ["Azrael"];
+in {
   outputs = {
     self,
     nixpkgs,
     ...
-  } @ inputs: {
-    nixosConfigurations = nixpkgs.lib.genAttrs ["Azrael"] (
-      host: nixpkgs.lib.nixosSystem inputs."${host}"
+  } @ inputs: with nixpkgs.lib; {
+    nixosConfigurations = genAttrs hosts (
+      host: nixosSystem {inherit (inputs."${host}") specialArgs modules;}
     );
   };
 
@@ -16,7 +18,7 @@
         url = "path:./hosts/${name}";
         inputs.nixpkgs.follows = "nixpkgs";
       };
-    }) ["Azrael"])
+    }) hosts)
     // {
       nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     };

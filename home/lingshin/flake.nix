@@ -1,11 +1,11 @@
 {
   inputs = {
     lazy-nvim = {
-      flake = true;
+      flake = false;
       url = "github:folke/lazy.nvim/stable";
     };
     mpv-modernx = {
-      flake = true;
+      flake = false;
       url = "github:cyl0/ModernX";
     };
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
