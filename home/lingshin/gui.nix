@@ -2,14 +2,17 @@
   home.packages = with pkgs; [
     anyrun
     rofi-wayland
+
     waybar
     wlogout
-    kitty
-    firefox
-    gui-for-singbox
+    swww
 
     hyprshot
     hyprlock
     satty
+
+    kitty
+    firefox
+    gui-for-singbox
   ];
 }

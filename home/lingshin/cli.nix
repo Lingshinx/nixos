@@ -8,6 +8,7 @@
     choose
 
     tldr
+    fastfetch
 
     # for fish
     zoxide
