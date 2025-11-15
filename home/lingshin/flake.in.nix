@@ -23,6 +23,6 @@ in
       };
 
     outputs = inputs: {
-      modules = [./group.nix];
+      modules = [./base.nix];
     };
   }
