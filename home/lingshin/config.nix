@@ -1,18 +1,30 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: let
+  sourceDir = dir: {
+    source = dir;
+    recursive = true;
+  };
+in {
   home.username = "lingshin";
   home.homeDirectory = "/home/lingshin";
 
-  home.packages = with pkgs; [
-    fastfetch
-    eza
-    fzf
-    socat
-    waybar
-    wlogout
-    kitty
-    firefox
-    gui-for-singbox
-  ];
+  imports = [./cli.nix ./gui.nix];
+
+  home.file = {
+    ".config" = sourceDir ../../dotfiles/config;
+    nvim = sourceDir inputs.lingshin.nvim;
+  };
+
+  xdg.configFile = {
+    mpv = sourceDir inputs.lingshin.mpv-modernx;
+  };
+
+  xdg.dataFile = {
+    "nvim/lazy/lazy-nvim" = sourceDir inputs.lingshin.lazy-nvim;
+  };
 
   programs = {
     git = {
@@ -21,7 +33,6 @@
       userEmail = "yokaringx@outlook.com";
     };
 
-    starship.enable = true;
     home-manager.enable = true;
   };
 
