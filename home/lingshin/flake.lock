@@ -18,9 +18,82 @@
         "type": "github"
       }
     },
+    "lazy-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1762421181,
+        "narHash": "sha256-h5404njTAfqMJFQ3MAr2PWSbV81eS4aIs0cxAXkT0EM=",
+        "owner": "folke",
+        "repo": "lazy.nvim",
+        "rev": "85c7ff3711b730b4030d03144f6db6375044ae82",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "ref": "stable",
+        "repo": "lazy.nvim",
+        "type": "github"
+      }
+    },
+    "mpv-modernx": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1712549438,
+        "narHash": "sha256-q7DwyfmOIM7K1L7vvCpq1EM0RVpt9E/drhAa9rLYb1k=",
+        "owner": "cyl0",
+        "repo": "ModernX",
+        "rev": "3f2ed6b993059c6986bf34be3998048c50547187",
+        "type": "github"
+      },
+      "original": {
+        "owner": "cyl0",
+        "repo": "ModernX",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1763049705,
+        "narHash": "sha256-A5LS0AJZ1yDPTa2fHxufZN++n8MCmtgrJDtxFxrH4S8=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "3acb677ea67d4c6218f33de0db0955f116b7588c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-25.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nvim": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1762960364,
+        "narHash": "sha256-gPFJ6MZvUwgI9shPAE8sRBwcOwRH65Dz4Xdf1iJGCGg=",
+        "owner": "lingshinx",
+        "repo": "nvim-config",
+        "rev": "fe775255a05a372a31ffe441bd64494a2230a7d2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lingshinx",
+        "repo": "nvim-config",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
-        "flakegen": "flakegen"
+        "flakegen": "flakegen",
+        "lazy-nvim": "lazy-nvim",
+        "mpv-modernx": "mpv-modernx",
+        "nixpkgs": "nixpkgs",
+        "nvim": "nvim"
       }
     },
     "systems": {

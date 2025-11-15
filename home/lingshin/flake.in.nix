@@ -10,7 +10,7 @@ let
   };
 
   sources = {
-    lazy-nvim = fetchGithub "folke/lazy.nvim?rev=stable";
+    lazy-nvim = fetchGithub "folke/lazy.nvim/stable";
     mpv-modernx = fetchGithub "cyl0/ModernX";
     nvim = fetchFlake "lingshinx/nvim-config";
   };
