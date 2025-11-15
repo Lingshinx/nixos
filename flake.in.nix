@@ -9,7 +9,7 @@
     );
   };
 
-  inputs = builtins.deepSeq (with builtins;
+  inputs = with builtins;
     listToAttrs (map (name: {
       inherit name;
       value = {
@@ -19,5 +19,5 @@
     }) ["Azrael"])
     // {
       nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
-    });
+    };
 }
