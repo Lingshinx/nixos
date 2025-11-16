@@ -10,12 +10,18 @@
 
   sources = inputs.lingshin.inputs;
 in {
-  imports = [./cli.nix ./gui.nix ./files.nix];
+  imports = [
+    ./cli.nix
+    ./gui.nix
+    ./files.nix
+  ];
 
-  home= {
+  home = {
     username = "lingshin";
     homeDirectory = "/home/lingshin";
   };
+
+  dconf.settings = {};
 
   programs = {
     git = {

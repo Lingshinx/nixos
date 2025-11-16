@@ -23,5 +23,7 @@
     starship
 
     socat
+
+    home-manager
   ];
 }

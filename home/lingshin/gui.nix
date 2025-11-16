@@ -17,6 +17,5 @@
     mpv
     swayimg
     firefox
-    gui-for-singbox
   ];
 }
