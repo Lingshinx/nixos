@@ -2,7 +2,7 @@
   home.packages = with pkgs; [
     # desktop shell
     anyrun
-    rofi-wayland
+    rofi
     waybar
     wlogout
     swww

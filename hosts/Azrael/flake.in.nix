@@ -5,16 +5,19 @@ let
   };
 in {
   inputs = with (import ../../utils/fetch.nix); {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
-    home-manager = fetchFlake "nix-community/home-manager/release-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    home-manager = fetchFlake "nix-community/home-manager";
     lingshin = fetchHome "lingshin";
 
+    silentSDDM = fetchFlake "uiriansan/SilentSDDM";
+    stylix = fetchFlake "nix-community/stylix";
   };
 
   outputs = {
     nixpkgs,
     lingshin,
     home-manager,
+    stylix,
     ...
   } @ inputs:
     with import ../../utils/listFs.nix {inherit nixpkgs;};
@@ -27,6 +30,7 @@ in {
           [
             "${home-manager}/nixos"
             ./hardware.nix
+            stylix.nixosModules.stylix
             ({...}: {system.stateVersion = "25.11";})
           ]
         ];

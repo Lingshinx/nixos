@@ -8,7 +8,7 @@
       flake = false;
       url = "github:cyl0/ModernX";
     };
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nvim = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:lingshinx/nvim-config";

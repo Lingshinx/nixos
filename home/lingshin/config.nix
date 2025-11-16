@@ -35,8 +35,10 @@ in {
   programs = {
     git = {
       enable = true;
-      userName = "lingshin";
-      userEmail = "yokaringx@outlook.com";
+      settings.user = {
+        name = "lingshin";
+        email = "yokaringx@outlook.com";
+      };
     };
 
     home-manager.enable = true;
