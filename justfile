@@ -3,8 +3,8 @@ set shell := ["fish", "-c"]
 check argu = "" : prebuild
   nix flake check {{argu}}
 
-build: prebuild
-  sudo nixos-rebuild switch --flake .
+build argu = "": prebuild
+  sudo nixos-rebuild switch --flake . {{argu}}
 
 update: updatehost
   nix flake update --flake (realpath .)
