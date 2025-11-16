@@ -8,6 +8,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
       url = "path:../../home/lingshin";
     };
+    nix-index-database = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/nix-index-database";
+    };
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     silentSDDM = {
       inputs.nixpkgs.follows = "nixpkgs";

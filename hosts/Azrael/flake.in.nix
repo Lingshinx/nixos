@@ -18,6 +18,7 @@ in {
     nixpkgs,
     lingshin,
     home-manager,
+    nix-index-database,
     stylix,
     ...
   } @ inputs:
