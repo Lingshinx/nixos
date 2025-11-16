@@ -10,26 +10,11 @@
 
   sources = inputs.lingshin.inputs;
 in {
-  home.username = "lingshin";
-  home.homeDirectory = "/home/lingshin";
-  imports = [./cli.nix ./gui.nix];
+  imports = [./cli.nix ./gui.nix ./files.nix];
 
-  home.file = {
-    ".config" = sourceDir ../../dotfiles/config;
-  };
-
-  xdg.configFile = let
-    modernx = sources.mpv-modernx;
-    font = "Material-Design-Iconic-Font.ttf";
-  in {
-    "mpv/fonts/${font}".source = "${modernx}/${font}";
-    "mpv/scripts/modernx.lua".source = "${modernx}/modernx.lua";
-
-    nvim = sourceDir sources.nvim;
-  };
-
-  xdg.dataFile = {
-    "nvim/lazy/lazy-nvim" = sourceDir sources.lazy-nvim;
+  home= {
+    username = "lingshin";
+    homeDirectory = "/home/lingshin";
   };
 
   programs = {
