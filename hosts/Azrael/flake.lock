@@ -1,27 +1,8 @@
 {
   "nodes": {
-    "Azrael": {
-      "inputs": {
-        "home-manager": "home-manager",
-        "lingshin": "lingshin",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "path": "./hosts/Azrael",
-        "type": "path"
-      },
-      "original": {
-        "path": "./hosts/Azrael",
-        "type": "path"
-      },
-      "parent": []
-    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
-          "Azrael",
           "nixpkgs"
         ]
       },
@@ -62,7 +43,6 @@
         "lazy-nvim": "lazy-nvim",
         "mpv-modernx": "mpv-modernx",
         "nixpkgs": [
-          "Azrael",
           "nixpkgs"
         ],
         "nvim": "nvim"
@@ -75,9 +55,7 @@
         "path": "../../home/lingshin",
         "type": "path"
       },
-      "parent": [
-        "Azrael"
-      ]
+      "parent": []
     },
     "mpv-modernx": {
       "flake": false,
@@ -114,7 +92,6 @@
     "nvim": {
       "inputs": {
         "nixpkgs": [
-          "Azrael",
           "lingshin",
           "nixpkgs"
         ]
@@ -135,7 +112,8 @@
     },
     "root": {
       "inputs": {
-        "Azrael": "Azrael",
+        "home-manager": "home-manager",
+        "lingshin": "lingshin",
         "nixpkgs": "nixpkgs"
       }
     }

@@ -1,45 +1,5 @@
 {
   "nodes": {
-    "Azrael": {
-      "inputs": {
-        "home-manager": "home-manager",
-        "lingshin": "lingshin",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "path": "./hosts/Azrael",
-        "type": "path"
-      },
-      "original": {
-        "path": "./hosts/Azrael",
-        "type": "path"
-      },
-      "parent": []
-    },
-    "home-manager": {
-      "inputs": {
-        "nixpkgs": [
-          "Azrael",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1758463745,
-        "narHash": "sha256-uhzsV0Q0I9j2y/rfweWeGif5AWe0MGrgZ/3TjpDYdGA=",
-        "owner": "nix-community",
-        "repo": "home-manager",
-        "rev": "3b955f5f0a942f9f60cdc9cacb7844335d0f21c3",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "ref": "release-25.05",
-        "repo": "home-manager",
-        "type": "github"
-      }
-    },
     "lazy-nvim": {
       "flake": false,
       "locked": {
@@ -56,28 +16,6 @@
         "repo": "lazy.nvim",
         "type": "github"
       }
-    },
-    "lingshin": {
-      "inputs": {
-        "lazy-nvim": "lazy-nvim",
-        "mpv-modernx": "mpv-modernx",
-        "nixpkgs": [
-          "Azrael",
-          "nixpkgs"
-        ],
-        "nvim": "nvim"
-      },
-      "locked": {
-        "path": "../../home/lingshin",
-        "type": "path"
-      },
-      "original": {
-        "path": "../../home/lingshin",
-        "type": "path"
-      },
-      "parent": [
-        "Azrael"
-      ]
     },
     "mpv-modernx": {
       "flake": false,
@@ -114,8 +52,6 @@
     "nvim": {
       "inputs": {
         "nixpkgs": [
-          "Azrael",
-          "lingshin",
           "nixpkgs"
         ]
       },
@@ -135,8 +71,10 @@
     },
     "root": {
       "inputs": {
-        "Azrael": "Azrael",
-        "nixpkgs": "nixpkgs"
+        "lazy-nvim": "lazy-nvim",
+        "mpv-modernx": "mpv-modernx",
+        "nixpkgs": "nixpkgs",
+        "nvim": "nvim"
       }
     }
   },
