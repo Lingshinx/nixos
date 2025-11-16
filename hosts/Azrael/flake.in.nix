@@ -9,6 +9,7 @@ in {
     home-manager = fetchFlake "nix-community/home-manager";
     lingshin = fetchHome "lingshin";
 
+    nix-index-database = fetchFlake "nix-community/nix-index-database";
     silentSDDM = fetchFlake "uiriansan/SilentSDDM";
     stylix = fetchFlake "nix-community/stylix";
   };
@@ -28,10 +29,12 @@ in {
           (listAllFiles ../../system)
           lingshin.modules
           [
-            "${home-manager}/nixos"
             ./hardware.nix
-            stylix.nixosModules.stylix
             ({...}: {system.stateVersion = "25.11";})
+
+            "${home-manager}/nixos"
+            nix-index-database.nixosModules.nix-index
+            stylix.nixosModules.stylix
           ]
         ];
       };
