@@ -9,6 +9,10 @@
       url = "path:../../home/lingshin";
     };
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    silentSDDM = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:uiriansan/SilentSDDM";
+    };
   };
   outputs = inputs: (import ./flake.in.nix).outputs inputs;
 }
