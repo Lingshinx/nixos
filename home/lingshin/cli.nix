@@ -6,6 +6,7 @@
     fd      # find
     ripgrep # grep
     choose  # cut
+    gomi    # rm
 
     just # make
     tldr # man
