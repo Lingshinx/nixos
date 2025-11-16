@@ -1,16 +1,23 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    eza
-    bat
-    fzf
-    fd
-    ripgrep
-    choose
+    # base utils
+    eza     # ls
+    bat     # cat
+    fd      # find
+    ripgrep # grep
+    choose  # cut
 
-    tldr
+    just # make
+    tldr # man
+
+    jq
     fastfetch
 
+    # tui
+    lazygit
+
     # for fish
+    fzf
     zoxide
     starship
 
