@@ -18,8 +18,13 @@ in {
     ".config" = sourceDir ../../dotfiles/config;
   };
 
-  xdg.configFile = {
-    mpv = sourceDir sources.mpv-modernx;
+  xdg.configFile = let
+    modernx = sources.mpv-modernx;
+    font = "Material-Design-Iconic-Font.ttf";
+  in {
+    "mpv/fonts/${font}".source = "${modernx}/${font}";
+    "mpv/scripts/modernx.lua".source = "${modernx}/modernx.lua";
+
     nvim = sourceDir sources.nvim;
   };
 

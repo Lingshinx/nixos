@@ -1,17 +1,21 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
+    # desktop shell
     anyrun
     rofi-wayland
-
     waybar
     wlogout
     swww
-
-    hyprshot
     hyprlock
+
+    # utils
+    hyprshot
     satty
 
+    # application
     kitty
+    mpv
+    swayimg
     firefox
     gui-for-singbox
   ];
