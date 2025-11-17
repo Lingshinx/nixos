@@ -9,14 +9,14 @@
   };
 
   sources = inputs.lingshin.inputs;
-  assets = path: ../../assets + path;
+  assets = path: "${../../assets}/${path}";
 in {
   imports = [./cli.nix ./gui.nix];
 
   home.file = {
     ".config" = sourceDir ../../dotfiles/config;
 
-    "Pictures/Wallpapers" = sources (assets wallpapers);
+    "Pictures/Wallpapers" = sourceDir (assets "wallpapers");
   };
 
   xdg.configFile = let
@@ -28,8 +28,8 @@ in {
 
     nvim = sourceDir sources.nvim;
 
-    "lingshin/wallpaper/lock.png" = assets "lock.png";
-    "lingshin/wallpaper/transparent" = assets "transparent.png";
+    "lingshin/wallpaper/lock.png".source = assets "lock.png";
+    "lingshin/wallpaper/transparent".source = assets "transparent.png";
   };
 
   xdg.dataFile = {
