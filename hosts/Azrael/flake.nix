@@ -15,7 +15,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     silentSDDM = {
       inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:uiriansan/SilentSDDM";
+      url = "github:lingshinx/SilentSDDM/develop";
     };
     stylix = {
       inputs.nixpkgs.follows = "nixpkgs";

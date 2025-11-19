@@ -10,7 +10,7 @@ in {
     lingshin = fetchHome "lingshin";
 
     nix-index-database = fetchFlake "nix-community/nix-index-database";
-    silentSDDM = fetchFlake "uiriansan/SilentSDDM";
+    silentSDDM = fetchFlake "lingshinx/SilentSDDM/develop";
     stylix = fetchFlake "nix-community/stylix";
   };
 
@@ -22,7 +22,7 @@ in {
     stylix,
     ...
   } @ inputs:
-    with import ../../utils/listFs.nix {inherit nixpkgs;};
+    with import ../../utils/listFs.nix;
     with builtins;
       {
         specialArgs = {inherit inputs;};
