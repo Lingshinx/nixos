@@ -6,6 +6,7 @@
   home-manager = {
     extraSpecialArgs = {inherit inputs;};
     users.lingshin = import ./config.nix;
+    backupFileExtension = "bak";
   };
 
   users = {
