@@ -14,6 +14,8 @@ in {
     ./cli.nix
     ./gui.nix
     ./files.nix
+
+    sources.nvim.module
   ];
 
   home = {

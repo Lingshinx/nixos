@@ -5,10 +5,12 @@ with (import ../../utils/fetch.nix);
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     lazy-nvim = fetchGithub "folke/lazy.nvim/stable";
     mpv-modernx = fetchGithub "cyl0/ModernX";
-    nvim = fetchFlake "lingshinx/nvim-config";
+    nvim = fetchFlake "lingshinx/nvim-config/v0.3";
   };
 
-  outputs = inputs: {
-    modules = [./base.nix];
+  outputs = { nvim, ...} @ inputs: {
+    modules = [
+      ./base.nix
+    ];
   };
 }

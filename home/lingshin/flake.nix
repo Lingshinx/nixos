@@ -11,7 +11,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nvim = {
       inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:lingshinx/nvim-config";
+      url = "github:lingshinx/nvim-config/v0.3";
     };
   };
   outputs = inputs: (import ./flake.in.nix).outputs inputs;
