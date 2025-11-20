@@ -28,6 +28,7 @@ in {
         specialArgs = {inherit inputs;};
         modules = concatLists [
           (listAllFiles ../../system)
+          (listAllFiles ../../modules)
           lingshin.modules
           [
             ./hardware.nix

@@ -1,17 +1,17 @@
-{pkgs, inputs, ...}: let
-  silent-sddm = inputs.silentSDDM.packages.${pkgs.stdenv.hostPlatform.system}.default.override {
-    theme = ../dotfiles/sddm-silent-lingshin.conf;
-    extraBackgrounds = [../assets/dust.jpg];
-  };
-in {
+{pkgs, inputs, ...}: {
+  imports = [inputs.silentSDDM.nixosModules.silent-sddm];
+
+  qt.enable = true;
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
-    theme = silent-sddm.pname;
-    extraPackages = silent-sddm.propagatedBuildInputs;
+    theme = "silent";
+    silent = {
+      theme = ../dotfiles/sddm-silent-lingshin.conf;
+      extraBackgrounds = [../assets/dust.jpg];
+    };
   };
 
   programs.niri.enable = true;
-  environment.systemPackages = [pkgs.xwayland-satellite silent-sddm];
-  qt.enable = true;
+  environment.systemPackages = [pkgs.xwayland-satellite];
 }

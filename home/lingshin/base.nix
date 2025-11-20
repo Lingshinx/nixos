@@ -15,6 +15,7 @@
       isNormalUser = true;
       shell = pkgs.fish;
       group = "lingshin";
+      face-icon = ../../assets/avatars/lingshin;
       extraGroups = [
         "sudo"
       ];
