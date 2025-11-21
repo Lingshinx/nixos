@@ -14,6 +14,7 @@ in {
     ./cli.nix
     ./gui.nix
     ./files.nix
+    ./fonts.nix
 
     sources.nvim.module
   ];
