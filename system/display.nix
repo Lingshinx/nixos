@@ -1,5 +1,5 @@
 {pkgs, inputs, ...}: {
-  imports = [inputs.silentSDDM.nixosModules.silent-sddm];
+  imports = [inputs.silentSDDM.nixosModules.default];
 
   qt.enable = true;
   services.displayManager.sddm = {
