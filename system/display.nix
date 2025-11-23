@@ -1,4 +1,8 @@
-{pkgs, inputs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [inputs.silentSDDM.nixosModules.default];
 
   qt.enable = true;

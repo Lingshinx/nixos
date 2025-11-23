@@ -1,12 +1,17 @@
-{pkgs, inputs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   home.packages = with pkgs; [
     # base utils
-    eza     # ls
-    bat     # cat
-    fd      # find
+    eza # ls
+    bat # cat
+    fd # find
     ripgrep # grep
-    choose  # cut
-    gomi    # rm
+    choose # cut
+    gomi # rm
+    dust # du
 
     just # make
     tldr # man

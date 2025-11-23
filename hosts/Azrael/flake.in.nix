@@ -20,21 +20,20 @@ in {
     ...
   } @ inputs:
     with import ../../utils/listFs.nix;
-    with builtins;
-      {
-        specialArgs = {inherit inputs;};
-        modules = concatLists [
-          (listAllFiles ../../system)
-          (listAllFiles ../../modules)
-          lingshin.modules
-          [
-            ./hardware.nix
-            ({...}: {system.stateVersion = "25.11";})
-            ./gnome.nix
+    with builtins; {
+      specialArgs = {inherit inputs;};
+      modules = concatLists [
+        (listAllFiles ../../system)
+        (listAllFiles ../../modules)
+        lingshin.modules
+        [
+          ./hardware.nix
+          ({...}: {system.stateVersion = "25.11";})
+          ./gnome.nix
 
-            "${home-manager}/nixos"
-            nix-index-database.nixosModules.nix-index
-          ]
-        ];
-      };
+          "${home-manager}/nixos"
+          nix-index-database.nixosModules.nix-index
+        ]
+      ];
+    };
 }
