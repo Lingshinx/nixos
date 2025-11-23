@@ -17,10 +17,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:lingshinx/SilentSDDM/develop";
     };
-    stylix = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:nix-community/stylix";
-    };
   };
   outputs = inputs: (import ./flake.in.nix).outputs inputs;
 }
