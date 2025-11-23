@@ -7,7 +7,7 @@
   "spacing": 0,
   "include": [
     "~/.config/waybar/theme/ml4w/modules.jsonc",
-    "~/.config/waybar/monitor.jsonc"
+    "~/.cache/lingshin/waybar/monitor.jsonc"
   ],
   "modules-left": [
     "hyprland/submap",
