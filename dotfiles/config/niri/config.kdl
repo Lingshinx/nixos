@@ -2,7 +2,6 @@ spawn-at-startup "~/.config/lingshin/scripts/waybar/launch.sh";
 spawn-at-startup "~/.config/lingshin/scripts/niri/init-swww.sh";
 spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store";
 spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store";
-spawn-sh-at-startup "pkill darkman; darkman run"
 spawn-at-startup "hypridle"
 
 input {
@@ -329,6 +328,18 @@ animations {
     overview-open-close {
         spring damping-ratio=0.85 stiffness=700 epsilon=0.00001
     }
+}
+
+gestures {
+  dnd-edge-view-scroll {
+    trigger-width 200
+    max-speed 4000
+  }
+
+  dnd-edge-workspace-switch {
+    trigger-height 200
+    max-speed 4000
+  }
 }
 
 debug {
