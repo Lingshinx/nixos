@@ -1,11 +1,10 @@
-{pkgs, ...}:
-{
+{pkgs, ...}: {
   fonts.fontconfig = {
     enable = true;
     defaultFonts = {
       monospace = ["FiraCode Nerd Font Propo"];
-      serif = ["Noto Sans CJK SC"];
-      sansSerif = ["Noto Serif CJK SC"];
+      serif = ["Noto Serif CJK SC"];
+      sansSerif = ["Noto Sans CJK SC"];
     };
   };
   home.packages = with pkgs; [
