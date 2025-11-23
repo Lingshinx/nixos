@@ -1,11 +1,7 @@
 let
   hosts = ["Azrael"];
 in {
-  outputs = {
-    self,
-    nixpkgs,
-    ...
-  } @ inputs:
+  outputs = {nixpkgs, ...} @ inputs:
     with nixpkgs.lib; {
       nixosConfigurations = genAttrs hosts (
         host: nixosSystem {inherit (inputs."${host}") specialArgs modules;}
