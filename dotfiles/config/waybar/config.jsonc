@@ -18,7 +18,6 @@
     "niri/workspaces"
   ],
   "modules-right": [
-    "custom/updates",
     "pulseaudio",
     "battery",
     "network",

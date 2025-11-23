@@ -31,16 +31,6 @@
     },
     "max-length": 60
   },
-  // Updates Count
-  "custom/updates": {
-    "format": "{}",
-    "escape": true,
-    "return-type": "json",
-    "on-click": "kitty --class floating -e ~/.config/lingshin/scripts/waybar/install-updates.sh",
-    "exec": "~/.config/lingshin/scripts/waybar/check-updates.sh",
-    "interval": 1800,
-    "exec-on-event": true
-  },
   // fortune
   "custom/fortune": {
     "format": " ",
@@ -62,7 +52,7 @@
   // Clock
   "clock": {
     "format": "{:%H:%M - %a}",
-    "on-click": "swaync-client -t",
+    "on-click": "niri msg action close-window",
     "timezone": "",
     "tooltip": true,
     "tooltip-format": "  {:%d %b}"
