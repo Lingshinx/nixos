@@ -2,7 +2,7 @@
 
 set cache_dir (md ~/.cache/lingshin/niri-swww)
 set cur_output (niri msg --json focused-output | jq -r .name)
-set cur_wallpaper (randir --current ~/.config/lingshin/wallpaper/$cur_output)
+set cur_wallpaper (randir --current ~/.local/state/lingshin/wallpaper/$cur_output)
 set blurred_img $cache_dir/(basename $cur_wallpaper)
 set transparent ~/.config/lingshin/wallpaper/transparent.png
 set swww_argu --transition-type none --outputs $cur_output
