@@ -6,7 +6,7 @@
   "margin-right": 14,
   "spacing": 0,
   "include": [
-    "~/.config/waybar/theme/ml4w/modules.jsonc",
+    "~/.config/waybar/modules.jsonc",
     "~/.cache/lingshin/waybar/monitor.jsonc"
   ],
   "modules-left": [
