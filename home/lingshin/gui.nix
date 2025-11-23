@@ -17,5 +17,7 @@
     mpv
     swayimg
     firefox
+
+    neovide
   ];
 }

@@ -1,9 +1,5 @@
 {
   inputs = {
-    lazy-nvim = {
-      flake = false;
-      url = "github:folke/lazy.nvim/stable";
-    };
     mpv-modernx = {
       flake = false;
       url = "github:cyl0/ModernX";
@@ -11,7 +7,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nvim = {
       inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:lingshinx/nvim-config/v0.3";
+      url = "github:lingshinx/nvim-config/flake";
     };
   };
   outputs = inputs: (import ./flake.in.nix).outputs inputs;

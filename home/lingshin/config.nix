@@ -15,8 +15,6 @@ in {
     ./gui.nix
     ./files.nix
     ./fonts.nix
-
-    sources.nvim.module
   ];
 
   home = {

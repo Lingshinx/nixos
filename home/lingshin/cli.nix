@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, inputs, ...}: {
   home.packages = with pkgs; [
     # base utils
     eza     # ls
@@ -26,4 +26,14 @@
 
     home-manager
   ];
+
+  imports = [inputs.lingshin.inputs.nvim.homeModules.default];
+
+  programs.neovim = {
+    enable = true;
+    lingshin-config = {
+      enable = true;
+      languages = ["nix" "fish" "lua"];
+    };
+  };
 }
