@@ -11,15 +11,12 @@ in {
 
     nix-index-database = fetchFlake "nix-community/nix-index-database";
     silentSDDM = fetchFlake "lingshinx/SilentSDDM/develop";
-    stylix = fetchFlake "nix-community/stylix";
   };
 
   outputs = {
-    nixpkgs,
     lingshin,
     home-manager,
     nix-index-database,
-    stylix,
     ...
   } @ inputs:
     with import ../../utils/listFs.nix;
@@ -36,7 +33,6 @@ in {
 
             "${home-manager}/nixos"
             nix-index-database.nixosModules.nix-index
-            stylix.nixosModules.stylix
           ]
         ];
       };
