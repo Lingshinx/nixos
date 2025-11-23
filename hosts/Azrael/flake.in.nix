@@ -29,7 +29,7 @@ in {
         [
           ./hardware.nix
           ({...}: {system.stateVersion = "25.11";})
-          ./gnome.nix
+          ./plasma.nix
 
           "${home-manager}/nixos"
           nix-index-database.nixosModules.nix-index
