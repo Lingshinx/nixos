@@ -1,14 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: let
-  sourceDir = dir: {
-    source = "${dir}";
-    recursive = true;
-  };
-
-  sources = inputs.lingshin.inputs;
+{...}: let
 in {
   imports = [
     ./cli.nix
