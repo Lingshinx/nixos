@@ -10,6 +10,7 @@
     enable = true;
     wayland.enable = true;
     theme = "silent";
+    settings.General.DisplayServer = "wayland";
     silent = {
       theme = ../dotfiles/sddm-silent-lingshin.conf;
       extraBackgrounds = [../assets/dust.jpg];
