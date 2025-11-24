@@ -17,6 +17,7 @@
     swayimg
     firefox
     localsend
+    throne
 
     neovide
   ];
