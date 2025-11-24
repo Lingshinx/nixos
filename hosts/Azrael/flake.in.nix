@@ -11,6 +11,7 @@ in {
 
     nix-index-database = fetchFlake "nix-community/nix-index-database";
     silentSDDM = fetchFlake "lingshinx/SilentSDDM/develop";
+    plymouth-theme-lagtrain = fetchFlake "lingshinx/plymouth-theme-lagtrain";
   };
 
   outputs = {
