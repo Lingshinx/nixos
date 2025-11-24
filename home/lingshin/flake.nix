@@ -1,9 +1,5 @@
 {
   inputs = {
-    mpv-modernx = {
-      flake = false;
-      url = "github:cyl0/ModernX";
-    };
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nvim = {
       inputs.nixpkgs.follows = "nixpkgs";

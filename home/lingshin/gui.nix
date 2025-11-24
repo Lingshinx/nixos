@@ -14,9 +14,9 @@
 
     # application
     kitty
-    mpv
     swayimg
     firefox
+    localsend
 
     neovide
   ];
@@ -41,6 +41,13 @@
     iconTheme = {
       name = "WhiteSur";
       package = pkgs.whitesur-icon-theme;
+    };
+  };
+
+  programs = {
+    mpv = {
+      enable = true;
+      scripts = with pkgs.mpvScripts; [modernx thumbfast];
     };
   };
 }
