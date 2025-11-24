@@ -18,29 +18,13 @@
         "type": "github"
       }
     },
-    "mpv-modernx": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1712549438,
-        "narHash": "sha256-q7DwyfmOIM7K1L7vvCpq1EM0RVpt9E/drhAa9rLYb1k=",
-        "owner": "cyl0",
-        "repo": "ModernX",
-        "rev": "3f2ed6b993059c6986bf34be3998048c50547187",
-        "type": "github"
-      },
-      "original": {
-        "owner": "cyl0",
-        "repo": "ModernX",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1763678758,
-        "narHash": "sha256-+hBiJ+kG5IoffUOdlANKFflTT5nO3FrrR2CA3178Y5s=",
+        "lastModified": 1763835633,
+        "narHash": "sha256-HzxeGVID5MChuCPESuC0dlQL1/scDKu+MmzoVBJxulM=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "117cc7f94e8072499b0a7aa4c52084fa4e11cc9b",
+        "rev": "050e09e091117c3d7328c7b2b7b577492c43c134",
         "type": "github"
       },
       "original": {
@@ -89,7 +73,6 @@
     },
     "root": {
       "inputs": {
-        "mpv-modernx": "mpv-modernx",
         "nixpkgs": "nixpkgs",
         "nvim": "nvim"
       }
