@@ -1,0 +1,20 @@
+[font]
+size = 14
+
+[[font.normal]]
+family = "FiraCode Nerd Font Propo"
+
+[[font.bold]]
+family = "Maple Mono NF CN"
+
+[[font.italic]]
+family = "Maple Mono NF CN"
+
+[[font.bold_italit]]
+family = "Maple Mono NF CN"
+
+[box-drawing]
+mode = "native"
+
+[box-drawing.sizes]
+default = [2, 6] # Thin and thick values respectively, below 12px
