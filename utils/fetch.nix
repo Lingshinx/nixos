@@ -1,11 +1,17 @@
-{
-  fetchGithub = repo: {
-    url = "github:" + repo;
-    flake = false;
+let
+  fetchGithubWith = attr: repo:
+    {
+      url = "github:" + repo;
+    }
+    // attr;
+in {
+  fetchGithub = fetchGithubWith {};
+  fetchFlake = fetchGithubWith {
+    inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  fetchFlake = repo: {
-    url = "github:" + repo;
+  fetchHomeManager = fetchGithubWith {
     inputs.nixpkgs.follows = "nixpkgs";
+    inputs.home-manager.follows = "home-manager";
   };
 }

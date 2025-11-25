@@ -26,14 +26,25 @@ in {
       modules = concatLists [
         (listAllFiles ../../system)
         (listAllFiles ../../modules)
-        lingshin.modules
         [
+          lingshin.nixosModules.default
+
           ./hardware.nix
-          ({...}: {system.stateVersion = "25.11";})
           ./plasma.nix
 
-          "${home-manager}/nixos"
           nix-index-database.nixosModules.nix-index
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              extraSpecialArgs = {inherit inputs;};
+              backupFileExtension = "bak";
+            };
+          }
+
+          ({...}: {system.stateVersion = "25.11";})
         ]
       ];
     };

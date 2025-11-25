@@ -1,13 +1,5 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
-  home-manager = {
-    extraSpecialArgs = {inherit inputs;};
-    users.lingshin = import ./config.nix;
-    backupFileExtension = "bak";
-  };
+{pkgs, ...}: {
+  home-manager.users.lingshin = import ./config.nix;
 
   users = {
     groups.lingshin = {};

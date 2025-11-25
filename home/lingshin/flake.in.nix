@@ -3,11 +3,11 @@ with (import ../../utils/fetch.nix); {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nvim = fetchFlake "lingshinx/nvim-config/flake";
+    home-manager = fetchFlake "nix-community/home-manager";
+    plasma-manager = fetchHomeManager "nix-community/plasma-manager";
   };
 
   outputs = {...}: {
-    modules = [
-      ./base.nix
-    ];
+    nixosModules.default = ./base.nix;
   };
 }
