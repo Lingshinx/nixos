@@ -22,11 +22,6 @@
     neovide
   ];
 
-  qt = {
-    enable = true;
-    platformTheme = "gtk";
-  };
-
   gtk = {
     enable = true;
     theme = {
@@ -41,7 +36,9 @@
 
     iconTheme = {
       name = "WhiteSur";
-      package = pkgs.whitesur-icon-theme;
+      package = pkgs.whitesur-icon-theme.override {
+        alternativeIcons = true;
+      };
     };
   };
 

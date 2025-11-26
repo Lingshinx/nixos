@@ -1,12 +1,11 @@
-{inputs, ...}: let
+{...}: let
 in {
   imports = [
-    inputs.lingshin.inputs.plasma-manager.homeModules.plasma-manager
-
-    ./cli.nix
-    ./gui.nix
+    ./cli
+    ./gui
     ./files.nix
     ./fonts.nix
+    ./time-locale.nix
   ];
 
   home = {

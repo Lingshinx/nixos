@@ -1,39 +1,9 @@
 {
-  pkgs,
   inputs,
+  pkgs,
   ...
 }: {
-  home.packages = with pkgs; [
-    # base utils
-    eza # ls
-    bat # cat
-    fd # find
-    ripgrep # grep
-    choose # cut
-    gomi # rm
-    dust # du
-
-    just # make
-    tldr # man
-
-    jq
-    fastfetch
-
-    # tui
-    lazygit
-
-    # for fish
-    fzf
-    zoxide
-    starship
-
-    socat
-
-    home-manager
-  ];
-
   imports = [inputs.lingshin.inputs.nvim.homeModules.default];
-
   programs.neovim = {
     enable = true;
     lingshin-config = {
