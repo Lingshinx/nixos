@@ -1,8 +1,4 @@
-{
-  pkgs,
-  lib,
-  ...
-}: let
+{pkgs, ...}: let
   myPlasma =
     pkgs.writeTextFile {
       name = "my-plasma-session.desktop";
@@ -30,11 +26,7 @@ in {
   environment.plasma6 = {
     excludePackages = with pkgs.kdePackages; [
       plasma-browser-integration
-      konsole
-      ark
-      (lib.getBin qttools)
       elisa
-      okular
       baloo-widgets
       krdp
     ];

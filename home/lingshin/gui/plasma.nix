@@ -6,7 +6,6 @@
     qtvirtualkeyboard
 
     application-title-bar
-    qttools
     kconfig
     # karousel
   ];
