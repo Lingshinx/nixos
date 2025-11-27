@@ -1,4 +1,9 @@
 {pkgs, ...}: {
+  imports = [
+    ./theme.nix
+    ./plasma.nix
+  ];
+
   home.packages = with pkgs; [
     # desktop shell
     anyrun
@@ -21,26 +26,6 @@
 
     neovide
   ];
-
-  gtk = {
-    enable = true;
-    theme = {
-      name = "Tokyonight-Light";
-      package = pkgs.tokyonight-gtk-theme;
-    };
-
-    cursorTheme = {
-      name = "Bibata-Modern-Ice";
-      package = pkgs.bibata-cursors;
-    };
-
-    iconTheme = {
-      name = "WhiteSur";
-      package = pkgs.whitesur-icon-theme.override {
-        alternativeIcons = true;
-      };
-    };
-  };
 
   programs = {
     mpv = {

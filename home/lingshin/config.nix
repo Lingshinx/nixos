@@ -6,6 +6,7 @@ in {
     ./files.nix
     ./fonts.nix
     ./time-locale.nix
+    # ./plasma.nix
   ];
 
   home = {

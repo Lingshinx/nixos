@@ -1,8 +1,4 @@
 {pkgs, ...}: {
-  imports = [
-    ./theme.nix
-  ];
-
   qt = {
     enable = true;
     platformTheme = "gtk";
