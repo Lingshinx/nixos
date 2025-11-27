@@ -7,8 +7,8 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Tokyonight-Light";
-      package = pkgs.tokyonight-gtk-theme;
+      name = "WhiteSur";
+      package = pkgs.whitesur-gtk-theme;
     };
 
     cursorTheme = {
