@@ -3,6 +3,5 @@
   with kdePackages; [
     whitesur-kde
     plasma-keyboard
-    karousel
   ];
 }
