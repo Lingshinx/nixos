@@ -3,5 +3,11 @@
   with kdePackages; [
     whitesur-kde
     plasma-keyboard
+    qtvirtualkeyboard
+
+    application-title-bar
+    qttools
+    kconfig
+    # karousel
   ];
 }

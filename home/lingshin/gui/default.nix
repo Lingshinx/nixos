@@ -24,6 +24,11 @@
     localsend
     throne
 
+    # social-media
+    telegram-desktop
+    qq
+    fluffychat
+
     neovide
   ];
 
