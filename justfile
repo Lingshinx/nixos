@@ -6,14 +6,8 @@ check argu = "" : prebuild
 build argu = "": prebuild
   sudo nixos-rebuild switch --flake . {{argu}}
 
-update: updatehost
+update: prebuild
   nix flake update --flake (realpath .)
-
-updatehost host = "Azrael": updatehome
-  nix flake update --flake (realpath hosts/{{host}})
-
-updatehome user = "lingshin": prebuild
-  nix flake update --flake (realpath home/{{user}})
 
 prebuild:
   ./build.fish

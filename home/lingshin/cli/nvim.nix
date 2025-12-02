@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: {
-  imports = [inputs.lingshin.inputs.nvim.homeModules.default];
+  imports = [inputs.nvim.homeModules.default];
   programs.neovim = {
     enable = true;
     lingshin-config = {

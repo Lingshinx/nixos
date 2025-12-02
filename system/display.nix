@@ -4,7 +4,6 @@
   ...
 }: {
   imports = [inputs.silentSDDM.nixosModules.default];
-
   qt.enable = true;
   services.displayManager.sddm = {
     enable = true;
