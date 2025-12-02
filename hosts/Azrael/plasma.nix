@@ -14,7 +14,7 @@
       providedSessions = ["plasma-lingshin"];
     };
 in {
-  services.xserver.displayManager.sessionPackages = [
+  services.displayManager.sessionPackages = [
     myPlasma
   ];
 
