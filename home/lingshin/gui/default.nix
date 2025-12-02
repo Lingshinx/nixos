@@ -27,6 +27,9 @@
     telegram-desktop
     qq
     fluffychat
+    element-desktop
+
+    piliplus
 
     neovide
   ];

@@ -1,11 +1,16 @@
 {pkgs, ...}: {
   qt = {
     enable = true;
-    platformTheme = "gtk";
+    platformTheme = "kde";
+    style = {
+      name = "WhiteSur-alt";
+      package = pkgs.whitesur-kde;
+    };
   };
 
   gtk = {
     enable = true;
+    gtk2.force = true;
     theme = {
       name = "WhiteSur";
       package = pkgs.whitesur-gtk-theme;
