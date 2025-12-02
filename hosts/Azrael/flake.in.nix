@@ -31,10 +31,10 @@ in {
             };
           }
 
-          ({...}: {
+          {
             system.stateVersion = "25.11";
             nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
-          })
+          }
         ]
       ];
     };

@@ -1,5 +1,4 @@
-{...}: let
-in {
+{
   imports = [
     ./cli
     ./gui
