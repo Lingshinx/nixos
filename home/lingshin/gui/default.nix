@@ -20,7 +20,6 @@
     # application
     kitty
     swayimg
-    firefox
     localsend
     throne
 
@@ -33,6 +32,11 @@
   ];
 
   programs = {
+    firefox = {
+      enable = true;
+      languagePacks = ["zh-CN"];
+    };
+
     mpv = {
       enable = true;
       scripts = with pkgs.mpvScripts; [modernx thumbfast];
