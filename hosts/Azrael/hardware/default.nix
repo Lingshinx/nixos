@@ -9,6 +9,7 @@
 }: {
   imports = [
     ./filesystem.nix
+    ./graphics.nix
     "${modulesPath}/installer/scan/not-detected.nix"
   ];
 
