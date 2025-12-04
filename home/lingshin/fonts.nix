@@ -5,6 +5,7 @@
       monospace = ["FiraCode Nerd Font Propo"];
       serif = ["Noto Serif CJK SC"];
       sansSerif = ["Noto Sans CJK SC"];
+      emoji = ["Noto Color Emoji"];
     };
   };
   home.packages = with pkgs; [
