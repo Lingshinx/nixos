@@ -17,7 +17,7 @@ in {
         (listAllFiles ../../modules)
         (map (user: ((getFile user).outputs inputs).nixosModules.default) users)
         [
-          ./hardware.nix
+          ./hardware
           ./plasma.nix
           nix-index-database.nixosModules.nix-index
 
