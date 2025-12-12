@@ -6,12 +6,11 @@
   "margin-right": 14,
   "spacing": 0,
   "include": [
-    "~/.config/waybar/modules.jsonc",
-    "~/.cache/lingshin/waybar/monitor.jsonc"
+    "~/.config/waybar/modules.jsonc"
   ],
   "modules-left": [
-    "hyprland/submap",
-    "custom/fortune",
+    "custom/Arch",
+    "custom/wallpaper",
     "niri/window"
   ],
   "modules-center": [
