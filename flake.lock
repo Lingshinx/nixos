@@ -163,16 +163,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1763863872,
-        "narHash": "sha256-KebMXNG76o0ieLxvaF+I/mDvhqQdqgQXju+mRVjwZ+k=",
+        "lastModified": 1765342372,
+        "narHash": "sha256-8kIwHhwmeHPFfagueom0xCqfe2YsBNl6ShCIA2PbhSY=",
         "owner": "lingshinx",
         "repo": "nvim-config",
-        "rev": "a0f9af60646c74dc992e4b3f5d671081246810fb",
+        "rev": "c74cf206789ab2a0f7bde7f9e86dcfff4cc7fd71",
         "type": "github"
       },
       "original": {
         "owner": "lingshinx",
-        "ref": "flake",
+        "ref": "unstable",
         "repo": "nvim-config",
         "type": "github"
       }

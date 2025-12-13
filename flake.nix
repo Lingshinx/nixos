@@ -11,7 +11,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nvim = {
       inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:lingshinx/nvim-config/flake";
+      url = "github:lingshinx/nvim-config/unstable";
     };
     plasma-manager = {
       inputs = {
