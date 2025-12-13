@@ -5,6 +5,8 @@ with (import ../../utils/fetch.nix); {
     nvim = fetchFlake "lingshinx/nvim-config/unstable";
     home-manager = fetchFlake "nix-community/home-manager";
     plasma-manager = fetchHomeManager "nix-community/plasma-manager";
+
+    dankMaterialShell = fetchFlake "AvengeMedia/DankMaterialShell";
   };
 
   outputs = {...}: {

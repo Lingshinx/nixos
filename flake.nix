@@ -1,5 +1,9 @@
 {
   inputs = {
+    dankMaterialShell = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:AvengeMedia/DankMaterialShell";
+    };
     home-manager = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/home-manager";

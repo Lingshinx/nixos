@@ -2,21 +2,11 @@
   imports = [
     ./theme.nix
     ./plasma.nix
+    ./dank.nix
+    ./wm.nix
   ];
 
   home.packages = with pkgs; [
-    # desktop shell
-    anyrun
-    rofi
-    waybar
-    wlogout
-    swww
-    hyprlock
-
-    # utils
-    hyprshot
-    satty
-
     # application
     kitty
     swayimg
