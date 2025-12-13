@@ -6,7 +6,7 @@ in {
     pkgs.lib.genAttrs (attrNames (readDir configPath)) (
       path: {
         source = config path;
-        recursive = elem path ["anyrun" "waybar"];
+        recursive = elem path ["anyrun"];
       }
     );
 }
