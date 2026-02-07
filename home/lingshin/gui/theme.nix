@@ -1,12 +1,8 @@
 {pkgs, ...}: {
-  qt = {
-    enable = true;
-    platformTheme.name = "kde";
-    style = {
-      name = "WhiteSur-alt";
-      package = pkgs.whitesur-kde;
-    };
-  };
+  home.packages = with pkgs; [
+    kdePackages.qt6ct
+    whitesur-kde
+  ];
 
   gtk = {
     enable = true;
