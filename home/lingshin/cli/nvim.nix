@@ -1,24 +1,19 @@
-{
-  inputs,
-  pkgs,
-  ...
-}: {
-  imports = [inputs.nvim.homeModules.default];
+{pkgs, ...}: {
+  programs.neovim.enable = true;
   programs.neovim = {
-    enable = true;
-    lingshin-config = {
-      enable = true;
-      languages = ["nix" "fish" "lua"];
-    };
-
+    plugins = [pkgs.vimPlugins.lazy-nvim];
     extraPackages = with pkgs; [
       stylua
       luajitPackages.lua-lsp
+
+      github-cli
 
       fish-lsp
 
       alejandra
       nixd
+
+      nodejs
     ];
   };
 }
