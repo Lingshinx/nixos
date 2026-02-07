@@ -19,6 +19,7 @@ in {
         [
           ./hardware
           ./plasma.nix
+          ./waydroid.nix
           nix-index-database.nixosModules.nix-index
 
           home-manager.nixosModules.home-manager
