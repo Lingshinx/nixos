@@ -2,8 +2,10 @@
   imports = [
     ./theme.nix
     ./plasma.nix
+    ./xdg.nix
     ./dank.nix
     ./wm.nix
+    ./game.nix
   ];
 
   home.packages = with pkgs; [
