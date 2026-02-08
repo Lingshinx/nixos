@@ -23,6 +23,8 @@
 
     piliplus
 
+    qbittorrent
+
     neovide
   ];
 
