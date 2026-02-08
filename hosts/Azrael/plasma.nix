@@ -23,6 +23,7 @@ in {
     enableQt5Integration = false;
   };
 
+  environment.etc."xdg/menus/applications.menu".source = "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
   environment.plasma6 = {
     excludePackages = with pkgs.kdePackages; [
       plasma-browser-integration
