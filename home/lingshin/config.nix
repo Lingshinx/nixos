@@ -2,7 +2,7 @@
   imports = [
     ./cli
     ./gui
-    ./files.nix
+    # ./files.nix
     ./fonts.nix
     ./time-locale.nix
     # ./plasma.nix
