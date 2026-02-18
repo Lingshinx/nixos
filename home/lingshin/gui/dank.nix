@@ -3,7 +3,5 @@
     inputs.dankMaterialShell.homeModules.dank-material-shell
   ];
 
-  programs.dankMaterialShell = {
-    enable = true;
-  };
+  programs.dank-material-shell.enable = true;
 }
