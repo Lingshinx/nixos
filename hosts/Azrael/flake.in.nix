@@ -20,6 +20,7 @@ in {
           ./hardware
           ./plasma.nix
           ./waydroid.nix
+          ./steam.nix
           nix-index-database.nixosModules.nix-index
 
           home-manager.nixosModules.home-manager
