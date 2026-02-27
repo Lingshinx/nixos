@@ -4,11 +4,9 @@
     plugins = [pkgs.vimPlugins.lazy-nvim];
     extraPackages = with pkgs; [
       stylua
-      luajitPackages.lua-lsp
+      lua-language-server
 
       github-cli
-
-      fish-lsp
 
       alejandra
       nixd
