@@ -2,7 +2,7 @@
   networking = {
     hostName = "Azrael";
     networkmanager.enable = true;
-    firewall.allowedTCPPorts = [10721];
+    firewall.enable = false;
   };
 
   services.tailscale.enable = true;
