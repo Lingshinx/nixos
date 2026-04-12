@@ -6,6 +6,8 @@
       stylua
       lua-language-server
 
+      tree-sitter
+
       github-cli
 
       alejandra
