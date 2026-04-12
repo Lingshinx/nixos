@@ -5,7 +5,7 @@
     rofi
     waybar
     wlogout
-    swww
+    awww
     hyprlock
 
     wl-clipboard
