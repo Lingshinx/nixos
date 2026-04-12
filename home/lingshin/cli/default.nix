@@ -31,9 +31,12 @@
   programs = {
     git = {
       enable = true;
-      settings.user = {
-        name = "lingshin";
-        email = "yokaringx@outlook.com";
+      settings = {
+        init.defaultBranch = "main";
+        user = {
+          name = "lingshin";
+          email = "yokaringx@outlook.com";
+        };
       };
     };
 
