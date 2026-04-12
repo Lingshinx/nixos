@@ -17,5 +17,8 @@
     neovim
     git
     fish
+    inotify-tools
+    psmisc
+    lsof
   ];
 }
