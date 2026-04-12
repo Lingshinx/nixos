@@ -3,7 +3,6 @@
     ./theme.nix
     ./plasma.nix
     ./xdg.nix
-    ./dank.nix
     ./wm.nix
     ./game.nix
   ];
