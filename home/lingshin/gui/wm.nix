@@ -12,7 +12,9 @@
     cliphist
 
     # utils
-    hyprshot
+    grim
+    slurp
     satty
+    zbar
   ];
 }
