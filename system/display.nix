@@ -12,7 +12,7 @@
     theme = "silent";
     settings.General.DisplayServer = "wayland";
     silent = {
-      theme = ../dotfiles/sddm-silent-lingshin.conf;
+      theme = ../assets/sddm-silent-lingshin.conf;
       extraBackgrounds = [../assets/dust.jpg];
     };
   };
