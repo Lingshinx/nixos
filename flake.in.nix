@@ -8,7 +8,6 @@ in {
     // {
       nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
       home-manager = fetchFlake "nix-community/home-manager";
-      nix-index-database = fetchFlake "nix-community/nix-index-database";
       silentSDDM = fetchFlake "lingshinx/SilentSDDM/develop";
       plymouth-theme-lagtrain = fetchFlake "lingshinx/plymouth-theme-lagtrain";
     };

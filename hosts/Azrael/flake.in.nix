@@ -5,11 +5,7 @@ let
 in {
   inputs = merge (map (user: (getFile user).inputs) users);
 
-  outputs = {
-    home-manager,
-    nix-index-database,
-    ...
-  } @ inputs:
+  outputs = {home-manager, ...} @ inputs:
     with import ../../utils/listFs.nix;
     with builtins; {
       modules = concatLists [
@@ -21,8 +17,7 @@ in {
           ./plasma.nix
           ./waydroid.nix
           ./steam.nix
-          nix-index-database.nixosModules.nix-index
-
+          ./dank.nix
           home-manager.nixosModules.home-manager
           {
             home-manager = {
