@@ -6,7 +6,7 @@ in {
   inputs = with (import utils/fetch.nix);
     merge (map (host: (getFile host).inputs) hosts)
     // {
-      nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+      nixpkgs = fetchGithub "NixOS/nixpkgs/nixos-unstable";
       home-manager = fetchFlake "nix-community/home-manager";
       silentSDDM = fetchFlake "lingshinx/SilentSDDM/develop";
       plymouth-theme-lagtrain = fetchFlake "lingshinx/plymouth-theme-lagtrain";

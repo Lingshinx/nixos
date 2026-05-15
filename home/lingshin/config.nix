@@ -2,10 +2,8 @@
   imports = [
     ./cli
     ./gui
-    # ./files.nix
     ./fonts.nix
     ./time-locale.nix
-    # ./plasma.nix
   ];
 
   home = {
@@ -13,5 +11,5 @@
     homeDirectory = "/home/lingshin";
   };
 
-  home.stateVersion = "25.05";
+  home.stateVersion = "26.05";
 }

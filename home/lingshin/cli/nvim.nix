@@ -1,7 +1,6 @@
 {pkgs, ...}: {
-  programs.neovim.enable = true;
   programs.neovim = {
-    plugins = [pkgs.vimPlugins.lazy-nvim];
+    enable = true;
     extraPackages = with pkgs; [
       stylua
       lua-language-server
@@ -12,8 +11,6 @@
 
       alejandra
       nixd
-
-      nodejs
     ];
   };
 }
