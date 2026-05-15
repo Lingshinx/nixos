@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-ln -sf ~/.config/anyrun/{style-light.css,style.css}
