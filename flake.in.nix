@@ -17,7 +17,7 @@ in {
       nixosConfigurations = genAttrs hosts (
         host:
           nixosSystem {
-            specialArgs = {inherit inputs;};
+            specialArgs = {inherit inputs; hostName = host;};
             inherit ((getFile host).outputs inputs) modules;
           }
       );
