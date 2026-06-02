@@ -10,6 +10,7 @@
     choose # cut
     gomi # rm
     dust # du
+    delta # diff
 
     just # make
     tldr # man
