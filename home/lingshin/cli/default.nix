@@ -15,6 +15,8 @@
     just # make
     tldr # man
 
+    jujutsu # git
+
     jq
     fastfetch
 
