@@ -9,8 +9,6 @@ with types; {
   options.users.users = mkOption {
     type = attrsOf (
       submodule ({
-        name,
-        config,
         ...
       }: {
         options.face-icon = mkOption {
