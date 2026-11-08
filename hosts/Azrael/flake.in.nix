@@ -17,7 +17,7 @@ in {
           ./plasma.nix
           ./waydroid.nix
           ./steam.nix
-          ./dank.nix
+          ./dux.nix
           home-manager.nixosModules.home-manager
           {
             home-manager = {
