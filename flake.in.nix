@@ -1,9 +1,11 @@
 let
-  getFile = host: import hosts/${host}/flake.in.nix;
+  inherit (import utils/attr.nix) filterAttrs;
+  hosts = builtins.attrNames (filterAttrs (name: type: type == "directory") (builtins.readDir ./hosts));
+  getHost = host: import ./hosts/${host}/flake.in.nix;
   inherit (import utils/attr.nix) merge;
 in {
   inputs = with (import utils/fetch.nix);
-    merge (map (host: (getFile host).inputs) hosts)
+    merge (map (host: (import ./hosts (getHost host)).inputs) hosts)
     // {
       nixpkgs = fetchGithub "NixOS/nixpkgs/nixos-unstable";
       home-manager = fetchFlake "nix-community/home-manager";
@@ -13,12 +15,10 @@ in {
 
   outputs = {nixpkgs, ...} @ inputs:
     with nixpkgs.lib; {
-      nixosConfigurations = let
-        hosts = attrnames (filterAttrs (name: type: type == "directory") (builtins.readDir dir));
-      in genAttrs hosts (
+      nixosConfigurations =genAttrs hosts (
         host: nixosSystem {
           specialArgs = {inherit inputs; hostName = host;};
-          inherit ((getFile host).outputs inputs) modules;
+          modules = (import ./hosts (getHost host)).outputs inputs;
         }
       );
     };

@@ -1,9 +1,5 @@
-with builtins; let
-  filterAttrs = f: xs:
-    listToAttrs (filter (attr: f attr.name attr.value) (map (name: {
-      inherit name;
-      value = xs.${name};
-    }) (attrNames xs)));
+with builtins;
+let inherit (import ./attr.nix) filterAttrs;
 in rec {
   list = pred: dir: map (name: "${toString dir}/${name}") (attrNames (filterAttrs pred (readDir dir)));
   listAll = list (name: type: type == "regular" || type == "directory");
