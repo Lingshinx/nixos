@@ -13,8 +13,6 @@ in {
       themePackages = [plymouth-theme-inputs];
     };
 
-    initrd.verbose = false;
-
     kernelPackages = pkgs.linuxPackages_latest;
     kernelParams = [
       "quite"
