@@ -1,5 +1,4 @@
 let
-  hosts = ["Azrael"];
   getFile = host: import hosts/${host}/flake.in.nix;
   inherit (import utils/attr.nix) merge;
 in {
@@ -14,12 +13,13 @@ in {
 
   outputs = {nixpkgs, ...} @ inputs:
     with nixpkgs.lib; {
-      nixosConfigurations = genAttrs hosts (
-        host:
-          nixosSystem {
-            specialArgs = {inherit inputs; hostName = host;};
-            inherit ((getFile host).outputs inputs) modules;
-          }
+      nixosConfigurations = let
+        hosts = attrnames (filterAttrs (name: type: type == "directory") (builtins.readDir dir));
+      in genAttrs hosts (
+        host: nixosSystem {
+          specialArgs = {inherit inputs; hostName = host;};
+          inherit ((getFile host).outputs inputs) modules;
+        }
       );
     };
 }
