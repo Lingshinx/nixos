@@ -9,6 +9,7 @@ with (import ../../utils/listFs.nix);
       };
       programs.steam.enable = true;
       programs.dux-shell.enable = true;
+      programs.dux-shell.systemd.enable = false;
     }
   ];
 }
