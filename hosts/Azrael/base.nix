@@ -1,6 +1,6 @@
-with (import ../utils/listFs.nix);
+with (import ../../utils/listFs.nix);
 {
-  imports = (listAllFiles ../../system) ++
+  imports = (listAllFiles ../../system) ++ [
     {
       imports = [./hardware];
       system.stateVersion = "26.05";
