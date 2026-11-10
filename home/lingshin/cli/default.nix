@@ -29,6 +29,8 @@
     starship
 
     socat
+
+    nushell
   ];
 
   programs = {
