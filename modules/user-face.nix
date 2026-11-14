@@ -8,9 +8,7 @@ with lib;
 with types; {
   options.users.users = mkOption {
     type = attrsOf (
-      submodule ({
-        ...
-      }: {
+      submodule ({...}: {
         options.face-icon = mkOption {
           type = nullOr path;
           default = null;
@@ -22,10 +20,23 @@ with types; {
     );
   };
 
-  config.systemd.tmpfiles.rules = with attrsets;
-    mapAttrsToList
+  config.systemd.tmpfiles.rules = with attrsets; let
+    content = name: {
+      User = {
+        Icon = "/var/lib/AccountsService/icons/${name}";
+      };
+    };
+    toINI = generators.toINI {};
+    escape = replaceStrings ["\n"] ["\\n"];
+    fileContent = name: escape (toINI (content name));
+    concatMapAttrsToList = func: attr: concatLists (mapAttrsToList func attr);
+  in
+    concatMapAttrsToList
     (
-      name: value: "L+ /var/lib/AccountsService/icons/${name} - - - - ${value.face-icon}"
+      name: value: [
+        "f+ /var/lib/AccountsService/users/${name} 0600 root root - ${fileContent name}"
+        "L+ /var/lib/AccountsService/icons/${name} - - - - ${value.face-icon}"
+      ]
     )
     (
       filterAttrs
