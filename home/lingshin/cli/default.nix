@@ -49,5 +49,12 @@
       enable = true;
       nix-direnv.enable = true;
     };
+
+    nh = {
+      enable = true;
+      clean.enable = true;
+      clean.extraArgs = "--keep-since 4d --keep 3";
+      flake = "/home/lingshin/Downloads/git/nixos";
+    };
   };
 }

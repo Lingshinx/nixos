@@ -15,11 +15,15 @@ in {
 
   outputs = {nixpkgs, ...} @ inputs:
     with nixpkgs.lib; {
-      nixosConfigurations =genAttrs hosts (
-        host: nixosSystem {
-          specialArgs = {inherit inputs; hostName = host;};
-          modules = (import ./hosts (getHost host)).outputs inputs;
-        }
+      nixosConfigurations = genAttrs hosts (
+        host:
+          nixosSystem {
+            specialArgs = {
+              inherit inputs;
+              hostName = host;
+            };
+            modules = (import ./hosts (getHost host)).outputs inputs;
+          }
       );
     };
 }
