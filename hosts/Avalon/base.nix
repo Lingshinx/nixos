@@ -2,8 +2,8 @@ with (import ../../utils/listFs.nix); {
   imports =
     (listAllFiles ../../system)
     ++ [
+      ./hardware
       {
-        imports = [./hardware];
         system.stateVersion = "26.05";
         features = {
           kde.enable = true;
