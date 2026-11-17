@@ -1,4 +1,9 @@
-{pkgs, lib, config, ...}: let
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: let
   myPlasma =
     pkgs.writeTextFile {
       name = "my-plasma-session.desktop";
@@ -17,7 +22,8 @@ in {
   options = {
     features.kde = {
       enable = lib.mkEnableOption "Whether to enable KDE plasma 6";
-      my-plasma-session = lib.mkEnableOption
+      my-plasma-session =
+        lib.mkEnableOption
         "Whether to generate a desktop session if fail to start plasma";
     };
   };

@@ -1,5 +1,5 @@
 {
   users = ["lingshin"];
   inputs = {};
-  outputs = {...}: { nixosModules.default = ./base.nix; };
+  outputs = {...}: {nixosModules.default = ./base.nix;};
 }

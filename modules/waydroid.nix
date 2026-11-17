@@ -1,4 +1,9 @@
-{pkgs, config, lib, ...}: {
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}: {
   options.features.waydroid.enable = lib.mkEnableOption "Whether to enable waydroid";
   config = lib.mkIf config.features.waydroid.enable {
     virtualisation.waydroid = {
