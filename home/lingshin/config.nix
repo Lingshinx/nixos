@@ -4,6 +4,7 @@
     ./gui
     ./fonts.nix
     ./time-locale.nix
+    ./pkg-mngr.nix
   ];
 
   home = {
