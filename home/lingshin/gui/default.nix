@@ -15,6 +15,7 @@
 
     # social-media
     telegram-desktop
+    qq
 
     qbittorrent
 
