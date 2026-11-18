@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   nixpkgs.config.allowUnfree = true;
   nix = {
     package = pkgs.nix;
@@ -7,6 +11,10 @@
       dates = "weekly";
       options = "--delete-older-than 7d";
     };
+    registry = {
+      nixpkgs.flake = inputs.nixpkgs;
+    };
+    nixPath = ["nixpkgs=${inputs.nixpkgs}"];
     settings = {
       sandbox = false;
       experimental-features = [
