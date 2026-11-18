@@ -1,4 +1,4 @@
 #!/usr/bin/env nix-shell
-#! nix-shell -i fish -p fd
+#! nix-shell -i fish
 
 cp (nix eval --impure --raw --expr "import ./utils/flakegen.nix ./flake.in.nix") flake.nix
