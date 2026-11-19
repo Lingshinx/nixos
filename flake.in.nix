@@ -1,8 +1,8 @@
 let
-  inherit (import utils/attr.nix) filterAttrs;
-  hosts = builtins.attrNames (filterAttrs (name: type: type == "directory") (builtins.readDir ./hosts));
-  getHost = host: import ./hosts/${host}/flake.in.nix;
+  inherit (import utils/fs.nix) list basename;
   inherit (import utils/attr.nix) merge;
+  hosts = basename (list.dirs ./hosts);
+  getHost = host: import ./hosts/${host}/flake.in.nix;
 in {
   inputs = with (import utils/fetch.nix);
     merge (map (host: (import ./hosts (getHost host)).inputs) hosts)
@@ -21,6 +21,7 @@ in {
             specialArgs = {
               inherit inputs;
               hostName = host;
+              allOtherModulesAt = list.exceptDefault;
             };
             modules = (import ./hosts (getHost host)).outputs inputs;
           }

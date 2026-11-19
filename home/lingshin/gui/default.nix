@@ -1,10 +1,9 @@
-{pkgs, ...}: {
-  imports = [
-    ./theme.nix
-    ./plasma.nix
-    ./xdg.nix
-    ./wm.nix
-  ];
+{
+  pkgs,
+  allOtherModulesAt,
+  ...
+}: {
+  imports = allOtherModulesAt ./.;
 
   home.packages = with pkgs; [
     # application

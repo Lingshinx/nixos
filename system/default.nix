@@ -1,0 +1,3 @@
+{allOtherModulesAt, ...}: {
+  imports = allOtherModulesAt ./.;
+}

@@ -1,5 +1,9 @@
-{pkgs, ...}: {
-  imports = [./nvim.nix ./gpg.nix];
+{
+  pkgs,
+  allOtherModulesAt,
+  ...
+}: {
+  imports = allOtherModulesAt ./.;
 
   home.packages = with pkgs; [
     # base utils
