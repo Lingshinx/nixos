@@ -1,9 +1,9 @@
 {
   pkgs,
-  allOtherModulesAt,
+  myLib,
   ...
 }: {
-  imports = allOtherModulesAt ./.;
+  imports = myLib.fs.list.exceptDefault ./.;
 
   home.packages = with pkgs; [
     # base utils

@@ -1,8 +1,8 @@
-{hostName, ...}: {
+{hostname, ...}: {
   networking = {
     networkmanager.enable = true;
     firewall.enable = false;
-    inherit hostName;
+    hostName = hostname;
   };
 
   services.tailscale.enable = true;

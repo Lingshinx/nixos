@@ -1,22 +1,15 @@
 {
   pkgs,
-  allOtherModulesAt,
+  myLib,
   ...
 }: {
-  imports = allOtherModulesAt ./.;
+  imports = myLib.fs.list.exceptDefault ./.;
 
   home.packages = with pkgs; [
-    # application
     kitty
     swayimg
     localsend
     throne
-
-    # social-media
-    telegram-desktop
-
-    qbittorrent
-
     neovide
   ];
 

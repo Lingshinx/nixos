@@ -1,3 +1,3 @@
-{allOtherModulesAt, ...}: {
-  imports = allOtherModulesAt ./.;
+{myLib, ...}: {
+  imports = myLib.fs.list.exceptDefault ./.;
 }

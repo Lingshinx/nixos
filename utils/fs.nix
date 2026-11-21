@@ -3,12 +3,14 @@ with builtins; let
   list = pred: dir: map (name: "${toString dir}/${name}") (attrNames (filterAttrs pred (readDir dir)));
   last = list: elemAt list (length list - 1);
   basename = filename: last (split "/" filename);
+  except = exceptions: list (name: type: !(elem name exceptions));
 in {
   list = {
     all = list (name: type: type == "regular" || type == "directory");
     files = list (name: type: type == "regular");
     dirs = list (name: type: type == "directory");
-    exceptDefault = list (name: type: type == "regular" && name != "default.nix");
+    except = except;
+    exceptDefault = except ["default.nix"];
   };
   basename = filename:
     if isString filename
